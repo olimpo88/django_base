@@ -1,0 +1,49 @@
+version: '2'
+services:
+  python:
+    image: base_django:0.1
+    restart: always
+    volumes:
+      - ./appdata/myapp:/usr/src/app
+      - ./appdata/static/node_modules:/usr/src/app/static/node_modules
+    environment:
+      DB_HOST: postgres
+      DB_NAME: myapp
+      DB_USER: myapp
+      DB_PASSWORD: PyDyn@m1cDNSP0s
+      #DJANGO_ADMIN_URL: administrator
+      DJANGO_SU_NAME: admin
+      DJANGO_SU_EMAIL: admin@my.company
+      DJANGO_SU_PASSWORD: 1234
+    depends_on:
+      - "postgres"
+    networks:
+      red:
+
+  postgres:
+    image: postgres:9.6
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: PyDyn@m1cDNSP0s
+      POSTGRES_USER: myapp
+      POSTGRES_DB: myapp
+    volumes:
+     - ./data/dbdata:/var/lib/postgresql/data
+    networks:
+      red:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:8000"
+    volumes:
+      - ./config/nginx_src:/src
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./appdata/static:/static
+    depends_on:
+      - "python"
+    networks:
+      red:
+networks:
+  red:
+
