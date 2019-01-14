@@ -1,0 +1,7 @@
+django==1.9
+django-datatables-view
+psycopg2-binary
+python-dateutil
+pillow
+requests
+dnspython==1.16.0
