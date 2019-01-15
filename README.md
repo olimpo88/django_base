@@ -3,7 +3,7 @@ Base para iniciar un proyecto con django y docker
 
 
 # Cómo usar
-- Install docker and docker-compose
+- Install docker y docker-compose
 - Clonar el proyecto ```git clone git@github.com:olimpo88/django_base.git```
 - Ingresar al directorio de docker ```cd django_base/docker/```
 - Crear la imagen ```docker build -t base_django:0.1 .```
