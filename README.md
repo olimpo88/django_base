@@ -1,14 +1,15 @@
 # Django Base
-Base para iniciar un proyecto con django y docker
+Start a project with django + postgrest + nginx
 
+# ![Django_Base](https://i.imgur.com/FfRsX1L.jpg)
 
 # Cómo usar
 - Install docker y docker-compose
-- Clonar el proyecto ```git clone git@github.com:olimpo88/django_base.git```
-- Ingresar al directorio de docker ```cd django_base/docker/```
-- Crear la imagen ```docker build -t base_django:0.1 .```
-- Volver a la raiz del proyecto ```cd ..```
-- Editar el archivo docker-compose.yml y configurar las variables de entorno a nuestro gusto ```nano docker-compose.yml```
-- Iniciar: ```docker-compose up```
+- Clone the project ```git clone git@github.com:olimpo88/django_base.git```
+- Get into the docker directory ```cd django_base/docker/```
+- Create the image ```docker build -t base_django:0.1 .```
+- Back to the project root ```cd ..```
+- Edit the file docker-compose.yml and configure the environment variables ```nano docker-compose.yml```
+- Start: ```docker-compose up```
 
 
