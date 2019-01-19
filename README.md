@@ -1,5 +1,5 @@
 # Django Base
-Start a project with django + postgreSQL + nginx
+Start a project with Django + PostgreSQL + Nginx
 
 # ![Django_Base](https://i.imgur.com/FfRsX1L.jpg)
 
