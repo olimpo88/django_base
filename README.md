@@ -3,7 +3,7 @@ Start a project with django + postgrest + nginx
 
 # ![Django_Base](https://i.imgur.com/FfRsX1L.jpg)
 
-# Cómo usar
+# How to use
 - Install docker y docker-compose
 - Clone the project ```git clone git@github.com:olimpo88/django_base.git```
 - Get into the docker directory ```cd django_base/docker/```
