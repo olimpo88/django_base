@@ -2,6 +2,7 @@ version: '2'
 services:
   python:
     image: base_django:0.1
+    user: "${UID}:${GID}"
     restart: always
     volumes:
       - ./appdata/myapp:/usr/src/app
